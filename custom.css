@@ -12,220 +12,98 @@ This will always be an empty file in IPython
     font-size: 12pt;
 }*/
 
+/*
+    Name:       Base16 Monokai Dark
+    Author:     Wimer Hazenberg (http://www.monokai.nl)
+    CodeMirror template adapted for IPython Notebook by Nikhil Sonnad (https://github.com/nsonnad/base16-ipython-notebook)
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-chrome-devtools)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+*/
 
-@import url('http://fonts.googleapis.com/css?family=Crimson+Text');
-@import url('http://fonts.googleapis.com/css?family=Kameron');
-@import url('http://fonts.googleapis.com/css?family=Lato:200');
-@import url('http://fonts.googleapis.com/css?family=Lato:300');
-@import url('http://fonts.googleapis.com/css?family=Lato:400');
-
-
-
-
-/* Change code font */
-.CodeMirror pre {
-    font-family: mplus-1m-regular, Monaco;
-    font-size: 12pt;
+ /*Uncomment to use a custom font*/
+div#notebook, div.CodeMirror, div.output_area pre, div.output_wrapper, div.prompt {
+  /*font-family: 'Custom Font Name', monospace !important;*/
+	font-family: mplus-1m-regular, monospace !important;
+	font-size: 12pt;
 }
 
-div.output pre{
-    font-family: mplus-1m-regular, Monaco;
-    font-size: 12pt;
-}
 
-div.output_html td{
-    font-family: Monaco;
-    font-size: 8pt;
-}
+/* GLOBALS */
+body {background-color: #272822;}
+a {color: #66d9ef;}
 
-div.prompt{
-    font-family: Monaco;
-    font-size: 8pt;
-}
+/* INTRO PAGE */
+.toolbar_info, .list_container {color: #f5f4f1;}
 
-div.completions select{
-    font-family: mplus-1m-regular, Monaco;
-    font-size: 12pt;
-}
+/* NOTEBOOK */
 
-div.container pre{
-    font-family: mplus-1m-regular, Monaco;
-    font-size: 12pt;
-}
+/* comment out this line to bring the toolbar back */
+div#maintoolbar, div#header {display: none !important;}
 
-div.tooltiptext pre{
-    font-family: Monaco;
-    font-size: 8pt;
-}
+div#notebook {border-top: none;}
 
+div.input_prompt {color: #cc6633;}
+div.output_prompt {color: #ae81ff;}
 div.input_area {
-    border-color: rgba(0,0,0,0.10);
-    background: rbga(0,0,0,0.5);
+  border-radius: 0px;
+  border: 1px solid #49483e;
 }
 
-div.text_cell {
-    max-width: 105ex; /* instead of 100%, */
+pre {
+	color: #222;
 }
 
-div.text_cell_render {
-    font-family: lato;
-    font-size: 11pt;
-    line-height: 145%; /* added for some line spacing of text. */
+div.output_area pre {font-weight: normal;}
+div.output_subarea {
+	background-color: #fff;
+	font-weight: normal; 
+	font-color: #222;
 }
 
-div.text_cell_render code{
-    font-family: mplus-1m-regular, Monaco;
-    font-size: 12pt;
+.rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
+  border: 1px  #f8f8f2 solid;
+  color: #f8f8f2;
 }
+div.output_html { font-family: sans-serif; }
+table.dataframe tr {border: 1px #f8f8f2;}
 
-div.text_cell_render h1,
-div.text_cell_render h2,
-div.text_cell_render h3,
-div.text_cell_render h4,
-div.text_cell_render h5,
-div.text_cell_render h6 {
-    font-family: lato, 'HelveticaNeue-Light';
-    font-weight: 300;
-}
+div.cell.selected {border-radius: 0px;}
+div.cell.edit_mode {border-radius: 0px; border: thin solid #ae81ff;}
+div.text_cell_render, div.output_html {color: #f8f8f2;}
 
-div.text_cell_render h1 {
-    font-size: 24pt;
-}
+span.ansiblack {color: #383830;}
+span.ansiblue {color: #a1efe4;}
+span.ansigray {color: #a59f85;}
+span.ansigreen {color: #a6e22e;}
+span.ansipurple {color: #ae81ff;}
+span.ansired {color: #f92672;}
+span.ansiyellow {color: #f4bf75;}
 
-div.text_cell_render h2 {
-    font-size: 18pt;
-}
+div.output_stderr {background-color: #f92672;}
+/*div.output_stderr pre {color: #f5f4f1;}*/
 
-div.text_cell_render h3 {
-    font-size: 14pt;
-}
+.cm-s-ipython.CodeMirror {background: #272822; color: #f5f4f1;}
+.cm-s-ipython div.CodeMirror-selected {background: #383830 !important;}
+.cm-s-ipython .CodeMirror-gutters {background: #272822; border-right: 0px;}
+.cm-s-ipython .CodeMirror-linenumber {color: #75715e;}
+.cm-s-ipython .CodeMirror-cursor {border-left: 1px solid #a59f85 !important;}
 
-.rendered_html pre,
-.rendered_html code {
-    font-size: medium;
-}
+.cm-s-ipython span.cm-comment {color: #cc6633;}
+.cm-s-ipython span.cm-atom {color: #ae81ff;}
+.cm-s-ipython span.cm-number {color: #ae81ff;}
 
-.rendered_html ol {
-    list-style:decimal;
-    margin: 1em 2em;
-}
+.cm-s-ipython span.cm-property, .cm-s-ipython span.cm-attribute {color: #a6e22e;}
+.cm-s-ipython span.cm-keyword {color: #f92672;}
+.cm-s-ipython span.cm-string {color: #f4bf75;}
+.cm-s-ipython span.cm-operator {color: #cc6633;}
+.cm-s-ipython span.cm-builtin {color: #ae81ff;}
 
-.prompt.input_prompt {
-    color: rgba(0,0,0,0.5);
-}
+.cm-s-ipython span.cm-variable {color: #a6e22e;}
+.cm-s-ipython span.cm-variable-2 {color: #66d9ef;}
+.cm-s-ipython span.cm-def {color: #fd971f;}
+.cm-s-ipython span.cm-error {background: #f92672; color: #a59f85;}
+.cm-s-ipython span.cm-bracket {color: #f8f8f2;}
+.cm-s-ipython span.cm-tag {color: #f92672;}
+.cm-s-ipython span.cm-link {color: #ae81ff;}
 
-.inner_cell {
-	background-color: #2C2D26;
-}
-
-.input_area {
-	background-color: #2C2D26;
-}
-
-.cell.command_mode.selected {
-    border-color: rgba(0,0,0,0.1);
-}
-
-.cell.edit_mode.selected {
-    border-color: rgba(0,0,0,0.15);
-    box-shadow: 0px 0px 5px #f0f0f0;
-    -webkit-box-shadow: 0px 0px 5px #f0f0f0;
-}
-
-div.output_scroll {
-    -webkit-box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
-    border-radious: 2px;
-}
-
-#menubar .navbar-inner {
-    /*background: #fff;*/
-    background-color: #2C2D26;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-radius: 0;
-    border: none;
-    font-family: lato;
-    font-weight: 400;
-}
-
-.navbar-fixed-top .navbar-inner,
-.navbar-static-top .navbar-inner {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    border: none;
-}
-
-div#notebook_panel {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    border-top: none;
-    background-color: #2C2D26;
-}
-
-div#notebook {
-    border-top: 1px solid rgba(0,0,0,0.15);
-}
-
-#menubar .navbar .navbar-inner,
-.toolbar-inner {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-#checkpoint_status,
-#autosave_status {
-    color: rgba(0,0,0,0.5);
-}
-
-#header {
-    font-family: lato;
-}
-
-#notebook_name {
-    font-weight: 200;
-}
-
-span.ansiblack {color: #282a2e;}
-span.ansiblue {color: #3971ED;}
-span.ansigray {color: #b4b7b4;}
-span.ansigreen {color: #198844;}
-span.ansipurple {color: #A36AC7;}
-span.ansired {color: #CC342B;}
-span.ansiyellow {color: #FBA922;}
-
-div.output_stderr {background-color: #CC342B;}
-div.output_stderr pre {color: #e0e0e0;}
-
-
-.cm-s-ipython.CodeMirror {
-	/*background: #ffffff;*/
-	background-color: #2C2D26;
-	color: #282a2e;
-}
-.cm-s-ipython div.CodeMirror-selected {background: #e0e0e0 !important;}
-.cm-s-ipython .CodeMirror-gutters {
-	/*background: #ffffff;*/
-	background-color: #2C2D26;
-	border-right: 0px;
-}
-.cm-s-ipython .CodeMirror-linenumber {color: #b4b7b4;}
-.cm-s-ipython .CodeMirror-cursor {border-left: 1px solid #969896 !important;}
-
-.cm-s-ipython span.cm-comment {color: #3971ED;}
-.cm-s-ipython span.cm-atom {color: #A36AC7;}
-.cm-s-ipython span.cm-number {color: #A36AC7;}
-
-.cm-s-ipython span.cm-property, .cm-s-ipython span.cm-attribute {color: #198844;}
-.cm-s-ipython span.cm-keyword {color: #CC342B;}
-.cm-s-ipython span.cm-string {color: #FBA922;}
-.cm-s-ipython span.cm-operator {color: #3971ED;}
-.cm-s-ipython span.cm-builtin {color: #A36AC7;}
-
-.cm-s-ipython span.cm-variable {color: #198844;}
-.cm-s-ipython span.cm-variable-2 {color: #3971ED;}
-.cm-s-ipython span.cm-def {color: #F96A38;}
-.cm-s-ipython span.cm-error {color: #969896;}
-.cm-s-ipython span.cm-bracket {color: #373b41;}
-.cm-s-ipython span.cm-tag {color: #CC342B;}
-.cm-s-ipython span.cm-link {color: #A36AC7;}
+.cm-s-ipython .CodeMirror-matchingbracket { text-decoration: underline; color: #f5f4f1 !important;}
