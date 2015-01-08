@@ -60,12 +60,13 @@ div.output_subarea {
 	font-color: #222;
 }
 
+/* Output dataframe */
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
-  border: 1px  #f8f8f2 solid;
-  color: #f8f8f2;
+  border: 1px  #222 solid;
+  color: #222;
 }
 div.output_html { font-family: sans-serif; }
-table.dataframe tr {border: 1px #f8f8f2;}
+table.dataframe tr {border: 1px #222;}
 
 div.cell.selected {border-radius: 0px;}
 div.cell.edit_mode {border-radius: 0px; border: thin solid #ae81ff;}
