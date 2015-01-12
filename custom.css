@@ -6,12 +6,6 @@ mainly to be overridden in profile/static/custom/custom.css
 This will always be an empty file in IPython
 */
 
-/* Change code font */
-/*.CodeMirror pre {
-    font-family: mplus-1m-regular, Monaco;
-    font-size: 12pt;
-}*/
-
 /*
     Name:       Base16 Monokai Dark
     Author:     Wimer Hazenberg (http://www.monokai.nl)
@@ -47,6 +41,10 @@ div.output_prompt {color: #ae81ff;}
 div.input_area {
   border-radius: 0px;
   border: 1px solid #49483e;
+}
+
+.completions {
+	box-shadow: 0 6px 10px -1px #333;
 }
 
 pre {
