@@ -56,6 +56,7 @@ div.output_subarea {
 	background-color: #fff;
 	font-weight: normal; 
 	font-color: #222;
+  overflow: auto;
 }
 
 /* Output dataframe */
